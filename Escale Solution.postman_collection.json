@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "54ff5462-7b32-4f26-a2ec-07c65c0aaba4",
+		"name": "Escale Solution",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "anuj",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "anuj2@gmail.com",
+									"description": "Should be unique",
+									"type": "text"
+								},
+								{
+									"key": "bio",
+									"value": "Software Developer",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "profilePic",
+									"description": "required",
+									"type": "file",
+									"src": "/home/anuj/Desktop/yzf-r15-v35e81b4472355b.webp"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/user/anuj@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"anuj@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "business",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"name\":\"crackers\",\n   \"email\":\"anuj111Crackers.com\",\n   \"registrationNo\":\"anuj111\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/business/5ff7a7f412eb3a641960ac16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"business",
+								"5ff7a7f412eb3a641960ac16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/business/anujbikers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"business",
+								"anujbikers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Two Rose",
+									"type": "text"
+								},
+								{
+									"key": "mrp",
+									"value": "256",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Good",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "image[2]",
+									"description": "required",
+									"type": "file",
+									"src": "/home/anuj/Desktop/yzf-r15-v35e81b4472355b.webp"
+								},
+								{
+									"key": "userId",
+									"value": "5ff65841c2fb3c1892b111d7",
+									"description": "One Field is required userId/businessId",
+									"type": "text"
+								},
+								{
+									"key": "businessId",
+									"value": "",
+									"description": "One Field is required userId/businessId",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Eight Rose",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "mrp",
+									"value": "60000",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Software Developer",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image[2]",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/product/5ff7b2476146a07452e72328",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"5ff7b2476146a07452e72328"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/product/5ff7b2476146a07452e72328",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"5ff7b2476146a07452e72328"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/ap1/v1/product/knfkengek",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"ap1",
+								"v1",
+								"product",
+								"knfkengek"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
