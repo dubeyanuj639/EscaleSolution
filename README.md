@@ -17,5 +17,5 @@ npm install
 
 * To start the server.
 ```
-NODE_ENV=development mgourl=mongodb://localhost:27017/EscaleSolutions PORT=5000 npm start
+NODE_ENV=development mongourl=mongodb://localhost:27017/EscaleSolutions PORT=5000 npm start
 ```
